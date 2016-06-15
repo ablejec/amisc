@@ -1,0 +1,9 @@
+Package: amisc
+Type: Package
+Title: Various Somewhat Useful FUnctions
+Version: 0.1.0
+Author: Andrej Blejec
+Maintainer: Andrej Blejec <andrej.blejec@nib.si>
+Description: The functions in this package are more or les useful utility functions.
+License: What license is it under?
+LazyData: TRUE
