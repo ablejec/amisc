@@ -2,6 +2,7 @@
 
 This package contains some functions I find useful for my work.
 
-How to install this package:
+To install this package, you need first to install package `devtools`.
+Then run:
 
-install_github("ablejec/amisc")
+devtools::install_github("ablejec/amisc")
