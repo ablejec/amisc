@@ -2,5 +2,7 @@
 
 export(add)
 export(catln)
+export(pause)
+export(purge)
 export(read.clipboard)
 export(testing)

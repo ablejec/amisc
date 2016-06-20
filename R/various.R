@@ -89,3 +89,59 @@ read.clipboard <-
   function (header = T, sep = "\t", ...) {
     read.table (file = "clipboard", header = header, sep = sep, ...)
   }
+#-------------------------------------------------------------------
+#' Pause Execution
+#'
+#' Pause stops execution and waits for any key to be pressed.
+#'
+#' @param prompt the string printer when prompting the user to press a key.
+#' @return NULL
+#' @export
+#' @author Andrej Blejec \email{andrej.blejec@nib.si}
+#' @examples \dontrun{
+#' for (i in 1:3) {
+#'   print(i)
+#'   pause()
+#' }
+#' }
+pause <-
+  function (prompt="Pause. Press <Enter> to continue... ") {
+    if(interactive()) readline (prompt)
+    invisible ()
+  }
+# ------------------------------------------------------------
+#-------------------------------------------------------------------
+#' Detach all Attached Datasets
+#'
+#' All attached datasets will be detached. Especially useful
+#' after a number of attaces of the same dataset
+#' (in interactive mode it happens).
+#'
+#' @param verbose print final search path list for confirmaton
+#' @return NULL
+#' @export
+#' @author Andrej Blejec \email{andrej.blejec@nib.si}
+#' @examples
+#' bla <- data.frame(x=1,y=1)
+#' try(print(x))
+#' attach(bla)
+#' attach(bla)
+#' search()
+#' purge()
+#' search()
+#' #
+#' try(x)
+#' attach(bla)
+#' try(x)
+#' purge(verbose=TRUE)
+#' #
+#' rm(bla)
+purge <-
+  function(verbose = FALSE) {
+    #
+    # detach all datasets
+    #
+    while (length (grep("package:", search ()[2])) == 0) detach ()
+    if (verbose) print(search ())
+  }
+
