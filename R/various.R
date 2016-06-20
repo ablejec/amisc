@@ -8,6 +8,7 @@
 ## $Date: $
 ##
 ##############################################################
+# ------------------------------------------------------------
 #' Concatenate and Print with End-Of-Line
 #'
 #' Outputs the objects and EOF, concatenating the representations.
@@ -30,7 +31,7 @@ catln <-
            append = FALSE,EOL="\n") {
     cat(..., EOL, file=file, sep=sep, fill=fill, labels=labels,append=append)
   }
-#
+# ------------------------------------------------------------
 #' Print Object Names and Values
 #'
 #' Outputs the objects names and values.
@@ -61,8 +62,7 @@ testing <-
   function(...,prefix=" Testing > > > \n" ) if (getOption("amisc.testing")) cat(prefix, deparse (substitute (...)), " = ", ...,"\n")
 #
 options(keep.source = TRUE)
-#
-#
+# ------------------------------------------------------------
 #' Read Clipboard
 #'
 #' Read text (usually table with data) from clipboard. This is a wrapper function for \code{read.table} with different defaults.
@@ -89,7 +89,7 @@ read.clipboard <-
   function (header = T, sep = "\t", ...) {
     read.table (file = "clipboard", header = header, sep = sep, ...)
   }
-#-------------------------------------------------------------------
+# ------------------------------------------------------------
 #' Pause Execution
 #'
 #' Pause stops execution and waits for any key to be pressed.
@@ -110,7 +110,6 @@ pause <-
     invisible ()
   }
 # ------------------------------------------------------------
-#-------------------------------------------------------------------
 #' Detach all Attached Datasets
 #'
 #' All attached datasets will be detached. Especially useful
