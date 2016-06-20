@@ -1,6 +1,7 @@
 #' Basic arithmetic
 #'
-#' @param x,y numeric vectors.
+#' @param x numeric vector.
+#' @param y numeric vector.
 #' @name arith
 NULL
 #' @rdname arith

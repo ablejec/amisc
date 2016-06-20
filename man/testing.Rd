@@ -8,6 +8,8 @@ testing(..., prefix = " Testing > > > \\n")
 }
 \arguments{
 \item{...}{R objects.}
+
+\item{prefix}{character string to be printed before values.}
 }
 \value{
 None (invisible NULL).

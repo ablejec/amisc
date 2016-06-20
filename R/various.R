@@ -13,8 +13,14 @@
 #'
 #' Outputs the objects and EOF, concatenating the representations.
 #'
-#' @param ... R objects (see \link{cat} 'Details' for the types of objects allowed).
-#' @param EOL Object to append (default is end-of-line \code{\\n})
+#' @param ... R objects (see \link{cat} 'Details' for the types
+#' of objects allowed).
+#' @param file see \link{read.table}.
+#' @param sep see \link{read.table}.
+#' @param fill see \link{read.table}.
+#' @param labels  see \link{read.table}.
+#' @param append see \link{read.table}.
+#' @param EOL Object to append (default is end-of-line \code{\\n}).
 #' @return None (invisible NULL).
 #' @note
 #' This function is mostly useful for printing values to console in plain R.
@@ -37,6 +43,7 @@ catln <-
 #' Outputs the objects names and values.
 #'
 #' @param ... R objects.
+#' @param prefix character string to be printed before values.
 #' @return None (invisible NULL).
 #' @details
 #' This function is useful for debugging where it can be useful to know
@@ -70,16 +77,14 @@ options(keep.source = TRUE)
 #' @param header
 #' a logical value indicating whether the file contains the names of the variables as its first line. Defaults to \code{TRUE}. If missing, the value is determined from the file format: header is set to TRUE if and only if the first row contains one fewer field than the number of columns.
 #' @param sep
-#' the field separator character (default \code{\\t}). Values on each line of the file are separated by this character. If sep = "" (the default for read.table) the separator is ‘white space’, that is one or more spaces, tabs, newlines or carriage returns.
+#' the field separator character (default \code{\\t}).
+#' Values on each line of the file are separated by this character.
+#' If sep = "" (the default for read.table) the separator
+#' is 'white space', that is one or more spaces, tabs, newlines or carriage returns.
+#' @param ... additional arguments passed to \link{read.table}.
 #' @return A data frame. See \link{read.table}
-#' @details
-#' This function is useful for debugging where it can be useful to know
-#' the name of the object associated with the displayed value.
-#'
-#' The actual printout depends on option \code{getOption("amisc.testing")}.
-#' If it is set to \code{FALSE} (default) nothing happens.
-#' If set to  \code{options(amisc.testing = TRUE)} test output is produced.
 #' @export
+#' @importFrom utils read.table
 #' @seealso \link{read.table}.
 #' @author Andrej Blejec \email{andrej.blejec@nib.si}
 #' @examples
@@ -143,4 +148,5 @@ purge <-
     while (length (grep("package:", search ()[2])) == 0) detach ()
     if (verbose) print(search ())
   }
+
 

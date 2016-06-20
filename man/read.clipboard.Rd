@@ -9,21 +9,18 @@ read.clipboard(header = T, sep = "\\t", ...)
 \arguments{
 \item{header}{a logical value indicating whether the file contains the names of the variables as its first line. Defaults to \code{TRUE}. If missing, the value is determined from the file format: header is set to TRUE if and only if the first row contains one fewer field than the number of columns.}
 
-\item{sep}{the field separator character (default \code{\\t}). Values on each line of the file are separated by this character. If sep = "" (the default for read.table) the separator is â€~white spaceâ€™, that is one or more spaces, tabs, newlines or carriage returns.}
+\item{sep}{the field separator character (default \code{\\t}).
+Values on each line of the file are separated by this character.
+If sep = "" (the default for read.table) the separator
+is 'white space', that is one or more spaces, tabs, newlines or carriage returns.}
+
+\item{...}{additional arguments passed to \link{read.table}.}
 }
 \value{
 A data frame. See \link{read.table}
 }
 \description{
 Read text (usually table with data) from clipboard. This is a wrapper function for \code{read.table} with different defaults.
-}
-\details{
-This function is useful for debugging where it can be useful to know
-the name of the object associated with the displayed value.
-
-The actual printout depends on option \code{getOption("amisc.testing")}.
-If it is set to \code{FALSE} (default) nothing happens.
-If set to  \code{options(amisc.testing = TRUE)} test output is produced.
 }
 \examples{
 # Copy some data to clipboard before running the code below

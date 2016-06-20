@@ -6,6 +6,7 @@ Authors@R: person("Andrej", "Blejec", email = "andrej.blejec@nib.si",
   role = c("aut", "cre"))
 Description: The functions in this package are more or less useful utility
     functions.
+Imports: utils
 License: GPL-3
 LazyData: TRUE
 RoxygenNote: 5.0.1

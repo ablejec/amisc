@@ -11,7 +11,9 @@ add(x, y)
 times(x, y)
 }
 \arguments{
-\item{x, y}{numeric vectors.}
+\item{x}{numeric vector.}
+
+\item{y}{numeric vector.}
 }
 \description{
 Basic arithmetic

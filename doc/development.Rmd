@@ -1,0 +1,32 @@
+---
+title: "Development file for functions"
+author: "A. Blejec"
+date: "20 junij 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## my.prn
+
+```{r}
+my.prn <-
+  function (x, txt) {
+    calltext <- as.character (sys.call ())[2]
+    if (! missing(txt)) {
+      if (nchar (txt) + nchar (calltext) + 3 > .Options$width)
+        calltext <- paste ("\n\n ", calltext, sep = "")
+      else txt <- paste (txt, " ", sep = "")
+      cat("\n", txt, calltext, "\n\n", sep = "")
+    }
+    else cat("\n", calltext, "\n\n", sep = "")
+    invisible (print(x))
+  }
+#' @examples
+x <- 1
+my.prn(x)
+my.prn(x,letters)
+```
+

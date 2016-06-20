@@ -8,9 +8,20 @@ catln(..., file = "", sep = " ", fill = FALSE, labels = NULL,
   append = FALSE, EOL = "\\n")
 }
 \arguments{
-\item{...}{R objects (see \link{cat} 'Details' for the types of objects allowed).}
+\item{...}{R objects (see \link{cat} 'Details' for the types
+of objects allowed).}
 
-\item{EOL}{Object to append (default is end-of-line \code{\\n})}
+\item{file}{see \link{read.table}.}
+
+\item{sep}{see \link{read.table}.}
+
+\item{fill}{see \link{read.table}.}
+
+\item{labels}{see \link{read.table}.}
+
+\item{append}{see \link{read.table}.}
+
+\item{EOL}{Object to append (default is end-of-line \code{\\n}).}
 }
 \value{
 None (invisible NULL).
