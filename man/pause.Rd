@@ -10,7 +10,7 @@ pause(prompt = "Pause. Press <Enter> to continue... ")
 \item{prompt}{the string printer when prompting the user to press a key.}
 }
 \description{
-Pause stops execution and waits for any key to be pressed.
+Stops execution and waits for any key to be pressed.
 }
 \examples{
 \dontrun{
