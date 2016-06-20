@@ -1,9 +1,14 @@
 Package: amisc
 Type: Package
-Title: Various Somewhat Useful FUnctions
+Title: Various Somewhat Useful Functions
 Version: 0.1.0
-Author: Andrej Blejec
-Maintainer: Andrej Blejec <andrej.blejec@nib.si>
-Description: The functions in this package are more or les useful utility functions.
-License: What license is it under?
+Authors@R: person("Andrej", "Blejec", email = "andrej.blejec@nib.si",
+  role = c("aut", "cre"))
+Description: The functions in this package are more or less useful utility
+    functions.
+License: GPL-3
 LazyData: TRUE
+RoxygenNote: 5.0.1
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
