@@ -13,20 +13,21 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 my.prn <-
-  function (x, txt) {
-    calltext <- as.character (sys.call ())[2]
-    if (! missing(txt)) {
-      if (nchar (txt) + nchar (calltext) + 3 > .Options$width)
-        calltext <- paste ("\n\n ", calltext, sep = "")
-      else txt <- paste (txt, " ", sep = "")
-      cat("\n", txt, calltext, "\n\n", sep = "")
+function (x, txt) 
+{
+    calltext <- as.character(sys.call())[2]
+    if (!missing(txt)) {
+        if (nchar(txt) + nchar(calltext) + 3 > .Options$width) 
+            calltext <- paste("\n\n ", calltext, sep = "")
+        else txt <- paste(txt, " ", sep = "")
+        cat("\n", txt,"\n> " ,calltext, "\n\n", sep = "")
     }
-    else cat("\n", calltext, "\n\n", sep = "")
-    invisible (print(x))
-  }
+    else cat("\n> ", calltext, "\n\n", sep = "")
+    invisible(print(x))
+}
 #' @examples
-x <- 1
-my.prn(x)
-my.prn(x,letters)
+my.prn(1:5)
+my.prn(1:5,"This is a sequence of first five integers")
+my.prn(exists("bla"),"You can check, if object named bla exists")
 ```
 
