@@ -1,6 +1,6 @@
 Package: amisc
 Type: Package
-Title: Various Somewhat Useful Functions
+Title: Miscellaneous Somewhat Useful Functions
 Version: 0.1.0
 Authors@R: person("Andrej", "Blejec", email = "andrej.blejec@nib.si",
   role = c("aut", "cre"))

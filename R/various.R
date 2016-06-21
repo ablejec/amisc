@@ -70,31 +70,6 @@ testing <-
 #
 options(keep.source = TRUE)
 # ------------------------------------------------------------
-#' Read Clipboard
-#'
-#' Read text (usually table with data) from clipboard. This is a wrapper function for \code{read.table} with different defaults.
-#'
-#' @param header
-#' a logical value indicating whether the file contains the names of the variables as its first line. Defaults to \code{TRUE}. If missing, the value is determined from the file format: header is set to TRUE if and only if the first row contains one fewer field than the number of columns.
-#' @param sep
-#' the field separator character (default \code{\\t}).
-#' Values on each line of the file are separated by this character.
-#' If sep = "" (the default for read.table) the separator
-#' is 'white space', that is one or more spaces, tabs, newlines or carriage returns.
-#' @param ... additional arguments passed to \link{read.table}.
-#' @return A data frame. See \link{read.table}
-#' @export
-#' @importFrom utils read.table
-#' @seealso \link{read.table}.
-#' @author Andrej Blejec \email{andrej.blejec@nib.si}
-#' @examples
-#' # Copy some data to clipboard before running the code below
-#' read.clipboard()
-read.clipboard <-
-  function (header = T, sep = "\t", ...) {
-    read.table (file = "clipboard", header = header, sep = sep, ...)
-  }
-# ------------------------------------------------------------
 #' Pause Execution
 #'
 #' Stops execution and waits for any key to be pressed.
