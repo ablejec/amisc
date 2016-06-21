@@ -4,7 +4,7 @@
 \name{amisc}
 \alias{amisc}
 \alias{amisc-package}
-\title{amisc: A package with functions I find handy}
+\title{amisc: Miscellaneous functions I find handy}
 \description{
 The package provides several functions I tend to use often.
 }
@@ -12,6 +12,6 @@ The package provides several functions I tend to use often.
 
 
 Debug functions type the result accordintg to the logical
-value of variable \code{.testing}
+value of the option \code{amisc.testing}
 }
 
