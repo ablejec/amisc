@@ -123,5 +123,26 @@ purge <-
     while (length (grep("package:", search ()[2])) == 0) detach ()
     if (verbose) print(search ())
   }
-
+# ------------------------------------------------------------
+#' MLE Variance Estimator
+#'
+#' Compute variance using the MLE variance estimator.
+#'
+#' @param x numeric vector
+#' @param na.rm logical. Should missing values be remove?
+#' @return MLE estimate of variance. Note that it is biased.
+#' @export
+#' @author Andrej Blejec \email{andrej.blejec@nib.si}
+#' @examples
+#' Var(1:4)
+#' 3/4*var(1:4)
+Var <-
+  function(x, na.rm=FALSE) {
+    #
+    # MLE variance estimator
+    #
+    if(na.rm) x <- x[!is.na(x)]
+    n <- length(x)
+    return(sum((x-mean(x))^2)/n)
+  }
 
