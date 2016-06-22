@@ -9,5 +9,7 @@ This package contains some functions I find useful for my work.
 ## Instalation
 
 
-`# install.packages("devtools")`
-`devtools::install_github("ablejec/amisc")`
+```R
+# install.packages("devtools")`
+devtools::install_github("ablejec/amisc")
+```
