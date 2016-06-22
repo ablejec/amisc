@@ -6,7 +6,7 @@
 
 This package contains some functions I find useful for my work.
 
-## Instalation
+## Installation
 
 
 ```R
