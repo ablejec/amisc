@@ -21,4 +21,4 @@ devtools::install_github("ablejec/amisc")
 ```
 
 ## Webpage
-https://ablejec.github.io/amisc/
+[https://ablejec.github.io/amisc/](https://ablejec.github.io/amisc/)
