@@ -19,3 +19,6 @@ if (!require(devtools)) {
 }
 devtools::install_github("ablejec/amisc")
 ```
+
+## Webpage
+https://ablejec.github.io/amisc/
