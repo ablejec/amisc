@@ -5,7 +5,7 @@
 
 [![DOI](https://zenodo.org/badge/5761/ablejec/amisc.svg)](https://zenodo.org/badge/latestdoi/5761/ablejec/amisc)
 
-# Package *amisc*
+# R Package *amisc*
 
 This package contains some functions I find useful for my work.
 
